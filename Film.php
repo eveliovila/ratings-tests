@@ -32,7 +32,7 @@ echo "<tr>";
 echo "<td>";
 
 echo "<div  class=\"datagrid\"  >";
-echo "<table> ";  //EMPIEZA A CREAR LA TABLA CON LOS ENCABEZADOS DE TABLA
+echo "<table> "; 
 echo "<tr>";
 echo        "<td rowspan=\"9\">";
 ?>
@@ -65,7 +65,7 @@ echo    "</tr>";
 echo    "<tr>";
 echo        "<td><a href=$row[9]>More Info</a></td>";
 echo    "</tr>";
-echo "</table>";//FINALIZA LA TABLA
+echo "</table>";
 echo "</div>";
 echo "</td>";
 echo "<td>";
@@ -74,10 +74,10 @@ echo "<td>";
 $user ="SELECT Name, Rate AS Rating, Modified AS DATE FROM Users NATURAL JOIN Rates WHERE const = '$id'";
 $reg1 = mysql_query($user);
 echo "<div class=\"CSSTableGenerator\"  >";
-echo "<table> \n";  //EMPIEZA A CREAR LA TABLA CON LOS ENCABEZADOS DE TABLA
-echo "<tr>";//<tr> CREA UNA NUEVA FILA
+echo "<table> \n";
+echo "<tr>";
 echo "<td>Name</td>";
-echo "<td>Rating</td>";//<td> CREA NUEVA COLUMNA
+echo "<td>Rating</td>";
 echo "<td>DATE</td>";
 echo "</tr>";
 

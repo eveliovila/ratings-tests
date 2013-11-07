@@ -20,10 +20,10 @@ $constructs =" SELECT * FROM Films WHERE const = '$id' ";
 
 $reg = mysql_query($constructs);
 echo "<div class=\"CSSTableGenerator\" >";
-echo "<table> \n";  //EMPIEZA A CREAR LA TABLA CON LOS ENCABEZADOS DE TABLA
-echo "<tr>";//<tr> CREA UNA NUEVA FILA
+echo "<table> \n";
+echo "<tr>";
 echo "<td>Poster</td>";
-echo "<td>Title</td>";//<td> CREA NUEVA COLUMNA
+echo "<td>Title</td>";
 echo "<td>Director</td>";
 echo "<td>IMDb_Rating</td>";
 echo "<td>Runtime</td>";
@@ -59,7 +59,7 @@ echo "<td><a href=$row[9]>More Info</a></td> \n";
 
 echo "</tr>";
 }
-echo "</table>";//FINALIZA LA TABLA
+echo "</table>";
 echo "</div>";
 
 
@@ -69,10 +69,10 @@ $user ="SELECT Name, Rate AS Rating, Modified AS DATE FROM Users NATURAL JOIN Ra
 
 $reg1 = mysql_query($user);
 echo "<div class=\"CSSTableGenerator\" >";
-echo "<table> \n";  //EMPIEZA A CREAR LA TABLA CON LOS ENCABEZADOS DE TABLA
-echo "<tr>";//<tr> CREA UNA NUEVA FILA
+echo "<table> \n"; 
+echo "<tr>";
 echo "<td>Name</td>";
-echo "<td>Rating</td>";//<td> CREA NUEVA COLUMNA
+echo "<td>Rating</td>";
 echo "<td>DATE</td>";
 echo "</tr>";
 
