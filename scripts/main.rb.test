@@ -1,0 +1,28 @@
+#!/usr/bin/ruby
+
+require 'csv'
+require 'mysql'
+require 'feed.rb'
+require 'time'
+
+m_host  = ''
+m_port  =''
+m_user  =''
+m_pass = ''
+m_base = ''
+
+
+my = Mysql.real_connect(m_host,m_user,m_pass,m_base,m_port)
+now = Time.now.strftime("%Y-%m-%d")
+
+
+
+    #Retrive user's list
+
+    my.query("select user_id from Users").each do |user|
+        update("~/ratings/#{user}-#{now}.csv", user)
+    end
+
+
+my.close if my
+
